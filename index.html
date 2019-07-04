@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="./build/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+    <!-- 全局引用 -->
+    <link rel="stylesheet" href="./lib/antd.css" />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- amd引用 -->
+    <!-- <script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script> -->
+    <!-- <script>
+        require.config ({
+            paths: {
+                "react": "./lib/react",
+                'react-dom': "./lib/react-dom",
+                'antd': './lib/antd',
+                'moment': './lib/moment'
+            }
+        });
+    </script> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="./buildlibDev/app.js"></script>
+    <script> 
+      console.log(ReactDOM);
+      var Comp = app.Comp;
+      new Comp().placeAt('root')
+    </script>
+    <!-- <script>
+       // console.log(React)
+        require(['./build/app.js'], function(App){
+           App = App.Comp;
+            new App().placeAt('root');
+        })
+    </script> -->
+  </body>
+</html>
